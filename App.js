@@ -1,21 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View,Text } from 'react-native'
+import Main from './Component/Main/Main'
+import Authentication from './Component/Authentication/Authentication';
+import ChangeInfo from './Component/ChangeInfo/ChangeInfo'
+import OrderHistory from './Component/OrderHistory/OrderHistory';
+
+
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+
+// const Stack = createNativeStackNavigator()
+// const Drawer = createDrawerNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    
+      <Main/>
+  // </NavigationContainer>  
+  //  <NavigationContainer >
+  //    <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='Main'>
+  //     <Stack.Screen  name="Main" component={Main} />
+  //     <Stack.Screen  name="Authentication" component={Authentication} />
+  //     <Stack.Screen name='ChangeInfo' component={ChangeInfo}/>
+  //     <Stack.Screen name='OrderHistory' component={OrderHistory}/>
+  //   </Stack.Navigator>
+  //  </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
